@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  // background: url(/assets/images/body.webp);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 174, 239, 0.136) 0%,
+    rgba(87, 199, 134, 0.11) 50%,
+    rgba(237, 221, 83, 0.041) 100%
+  );
+  // background: rgba(0, 175, 239, 0.112);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+  cursor: pointer;
+}
+.container {
+  padding: 0 10px !important;
+}

@@ -1,0 +1,47 @@
+@use "../../styles/index" as *;
+
+.home_page {
+  margin-top: 80px;
+  margin-bottom: 100px;
+
+  @include mobile {
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+}
+
+.home__hero {
+  text-align: center;
+  margin-bottom: 60px;
+
+  h1 {
+    color: $secondary_text-color;
+    @include font($primary-fonts, 48px, 600);
+    margin-bottom: 1rem;
+
+    @include mobile {
+      font-size: 32px;
+    }
+  }
+
+  p {
+    @include font($primary-fonts, 18px, 400);
+  }
+}
+
+.home__card {
+  background: $primary_bg_color;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  border-radius: 10px;
+
+  h3 {
+    color: $primary-color;
+    @include font($primary-fonts, 20px, 600);
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    @include font($primary-fonts, 14px, 400);
+  }
+}

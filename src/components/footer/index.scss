@@ -1,0 +1,54 @@
+@use "../../styles/index" as *;
+
+.footer {
+  background: $primary_bg_color;
+  padding-top: 40px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    max-width: 150px;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    max-width: 360px;
+    margin-bottom: 1rem;
+    @include font($primary-fonts, 14px, 400);
+  }
+
+  &__quick-links {
+    h3 {
+      margin-bottom: 1rem;
+      @include font($primary-fonts, 20px, 700);
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        margin-bottom: 0.5rem;
+        @include font($primary-fonts, 14px, 400);
+
+        a:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 30px;
+    padding: 15px 0;
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+    @include font($primary-fonts, 14px, 400);
+  }
+}

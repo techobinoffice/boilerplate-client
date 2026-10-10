@@ -1,0 +1,69 @@
+@use "../../styles/index" as *;
+
+.navigation {
+  z-index: 9999;
+  &.sticky {
+    transition: all linear 0.4s;
+    background: rgb(246 249 252 / 90%);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px !important;
+
+    &__logo {
+      width: 160px;
+    }
+
+    &__list {
+      .nav_items {
+        display: flex;
+        gap: 30px;
+
+        @include mobile {
+          display: none;
+        }
+      }
+
+      &__item {
+        @include font($primary-fonts, 16px, 500);
+        color: $secondary_text-color;
+        transition: color linear 0.2s;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+
+    &__toggle {
+      display: none;
+
+      @include mobile {
+        display: block;
+      }
+    }
+
+    &__mobile {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      padding: 16px 24px;
+      background: $primary_bg_color;
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+  }
+}

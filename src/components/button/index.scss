@@ -1,0 +1,10 @@
+@use "../../styles/index" as *;
+.link__button {
+  padding: 10px 20px;
+  background: $primary-color;
+  margin-top: 15px;
+  display: inline-block;
+  border-radius: 5px;
+  color: #fff;
+  @include font($primary-fonts, 16px, 400);
+}
